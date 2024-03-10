@@ -2,13 +2,10 @@ import { JSX } from 'react';
 import { Text } from 'react-native';
 
 import styles from './styles.ts';
+import { Props } from './types.ts';
 
-interface props {
-  text: string;
-}
-
-const Title = ({ text }: props): JSX.Element => {
-  return <Text style={styles.text}>{text}</Text>;
+const Title = ({ text, color }: Props): JSX.Element => {
+  return <Text style={[styles.text, { color: color }]}>{text}</Text>;
 };
 
 export default Title;

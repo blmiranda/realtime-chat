@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
-import theme from '../../global/styles/theme.ts';
+import theme from '../../global/styles/theme';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    backgroundColor: theme.colors.neutralBlack,
 
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },

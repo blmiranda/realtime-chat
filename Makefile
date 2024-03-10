@@ -6,5 +6,8 @@ run-ios:
 run-android:
 	cd app && npm run android
 
-run-server:
-	cd api && node index.ts
+server:
+	. ./api/.venv/bin/activate && cd api && python manage.py runserver
+
+redis:
+	redis-server

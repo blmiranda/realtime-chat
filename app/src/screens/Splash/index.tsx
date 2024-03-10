@@ -1,11 +1,23 @@
-import { JSX, useEffect } from 'react';
+import { JSX, useEffect, useLayoutEffect } from 'react';
 import { SafeAreaView, StatusBar, Animated } from 'react-native';
+import { NavigationProp, ParamListBase } from '@react-navigation/native';
 
+import theme from '../../global/styles/theme/index.ts';
 import styles from './styles.ts';
 
 import Title from '../../components/Title/index.tsx';
 
-const SplashScreen = (): JSX.Element => {
+interface props {
+  navigation: NavigationProp<ParamListBase>;
+}
+
+const SplashScreen = ({ navigation }: props): JSX.Element => {
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
+
   const translateY = new Animated.Value(0);
   const duration: number = 800;
 
@@ -31,7 +43,7 @@ const SplashScreen = (): JSX.Element => {
       <StatusBar barStyle="light-content" />
 
       <Animated.View style={{ transform: [{ translateY: translateY }] }}>
-        <Title text="RealtimeChat" />
+        <Title text="RealtimeChat" color={theme.colors.neutralWhite} />
       </Animated.View>
     </SafeAreaView>
   );

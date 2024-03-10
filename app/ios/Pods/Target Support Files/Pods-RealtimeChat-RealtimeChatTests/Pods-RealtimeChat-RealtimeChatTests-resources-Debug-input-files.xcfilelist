@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-RealtimeChat-RealtimeChatTests/Pods-RealtimeChat-RealtimeChatTests-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/React-Core/RCTI18nStrings.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios/Lottie_Privacy.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/lottie-react-native/Lottie_React_Native_Privacy.bundle
