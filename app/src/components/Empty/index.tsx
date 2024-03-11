@@ -10,8 +10,6 @@ import { Props } from './types.ts';
 const Empty = ({ icon, message, centered = true }: Props): JSX.Element => {
   const containerStyles = getContainerStyles(centered);
 
-  console.log('message onrequestsss: ', message);
-
   return (
     <View style={containerStyles}>
       <FontAwesomeIcon
