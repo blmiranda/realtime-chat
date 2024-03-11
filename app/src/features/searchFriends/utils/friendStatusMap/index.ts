@@ -11,13 +11,23 @@ const friendStatusMap: FriendStatusMap = {
   'not-connected': {
     text: 'Connect',
     disabled: false,
-    onPress: (socket, myUsername, username, searchList, setSearchList) =>
+    onPress: (
+      socket,
+      myUsername,
+      username,
+      searchList,
+      setSearchList,
+      requestList,
+      setRequestList
+    ) =>
       requestConnection(
         socket,
         myUsername,
         username,
         searchList,
-        setSearchList
+        setSearchList,
+        requestList,
+        setRequestList
       ),
   },
   'pending-them': {

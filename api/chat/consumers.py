@@ -74,7 +74,7 @@ class ChatConsumer(WebsocketConsumer):
 
         # Send to receiver
         self.send_group(
-            connection.receiver.username, 'request.connect', serialized.data
+            connection.receiver.username, 'request.connect', [serialized.data]
         )
 
     def receive_request_list(self, data):

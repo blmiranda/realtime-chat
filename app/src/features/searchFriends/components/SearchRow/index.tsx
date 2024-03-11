@@ -7,10 +7,11 @@ import { Props } from './types.ts';
 
 import Thumbnail from '../../../../components/Thumbnail/index.tsx';
 import SearchRowIndicator from '../SearchRowIndicator/index.tsx';
+import Cell from '../../../../components/Cell/index.tsx';
 
 const SearchRow = ({ user, searchList, setSearchList }: Props): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <Cell>
       <Thumbnail url={user.thumbnail} size={76} />
 
       <View style={styles.userInfo}>
@@ -23,7 +24,7 @@ const SearchRow = ({ user, searchList, setSearchList }: Props): JSX.Element => {
         searchList={searchList}
         setSearchList={setSearchList}
       />
-    </View>
+    </Cell>
   );
 };
 

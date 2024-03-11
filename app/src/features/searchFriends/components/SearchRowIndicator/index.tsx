@@ -19,24 +19,22 @@ const SearchRowIndicator = ({
   setSearchList,
 }: Props): JSX.Element => {
   const { userData } = useAuth();
-  const { socket } = useSocket();
+  const { socket, requestList, setRequestList } = useSocket();
 
   const buttonData: SearchRowButtonData = friendStatusMap[user.status];
 
   const containerStyles = getContainerStyles(buttonData);
 
   function handlePress() {
-    switch (user.status) {
-      case 'not-connected':
-        buttonData.onPress(
-          socket,
-          userData!.user.username,
-          user.username,
-          searchList,
-          setSearchList
-        );
-        break;
-    }
+    buttonData.onPress(
+      socket,
+      userData!.user.username,
+      user.username,
+      searchList,
+      setSearchList,
+      requestList,
+      setRequestList
+    );
   }
 
   if (user.status === 'connected') {

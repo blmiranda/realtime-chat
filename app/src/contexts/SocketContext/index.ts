@@ -5,6 +5,7 @@ import { SocketContextObject } from '../../global/types/socketContextObject.type
 const SocketContext = createContext<SocketContextObject>({
   socket: null,
   requestList: null,
+  setRequestList: () => {},
   socketConnect: () => {},
   socketClose: () => {},
 });
